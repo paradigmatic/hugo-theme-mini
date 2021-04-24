@@ -2,7 +2,7 @@
 {{ partial "profile.html" . }}
 
 <div id="list-page">
-    {{ $pages := .Site.RegularPages }}
+    {{ $pages := where .Site.RegularPages "Type" "posts"}}
     {{ $paginator := .Paginate ($pages) }}
     {{ range $paginator.Pages }}
         {{ $title := .Title }}
@@ -15,7 +15,6 @@
           </div>
 
           <div class="summary">{{ $summary | plainify | htmlUnescape }}</div>
-
         </section>
     {{ end }}
 

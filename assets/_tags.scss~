@@ -1,0 +1,17 @@
+	.tags {
+		margin-top: 24px;
+		a {
+			background: $discrete;
+			padding: 4px 7px;
+			color: $primary;
+			font-size: 14px;
+			margin-right: 3px;
+			text-decoration: none;
+			font-variant: small-caps;
+			font-weight: 575;
+		}
+		a:hover {
+			color: $accent;
+			text-decoration: underline;
+		}
+	}
