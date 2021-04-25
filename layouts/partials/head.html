@@ -10,15 +10,16 @@
   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 {{ end }}
 
-  <!-- <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"> -->
   
 {{ $style := resources.Get "/style.scss" | resources.ToCSS}}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}" type="image/x-icon" />
 
+
 {{ if .Site.Params.enableGoogleAnalytics }} 
     {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
+
 
 
 {{ if .OutputFormats.Get "RSS" }}
