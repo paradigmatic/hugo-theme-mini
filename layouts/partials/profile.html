@@ -9,7 +9,7 @@
 
     <h1>{{ .Site.Title }}</h1>
     
-    {{ with .Site.Params.Bio }}
+    {{ with .Site.Params.Tagline }}
       <h2>{{ . | markdownify }}</h2>
     {{ end }}
 </header>

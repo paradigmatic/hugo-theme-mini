@@ -10,6 +10,11 @@ $RECYCLE.BIN/
 # MacOS
 .DS_Store
 
+#emacs
+*~
+*#
+.#*
+
 # exampleSite
 exampleSite/themes
 exampleSite/public
