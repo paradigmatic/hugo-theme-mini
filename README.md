@@ -1,22 +1,14 @@
-# Hugo Theme Mini
+# Hugo Theme Mini-Zero
 
-English | [简体中文](https://github.com/nodejh/hugo-theme-mini/tree/master/README-zh_CN.md)
+Fork of [Hugo-Mini theme](https://github.com/nodejh/hugo-theme-mini). 
 
-A fast, minimalist and responsive hugo theme.
+Demo at my [personal blog](https://www.nadazero.ch/). 
 
-![./images/screenshot.png](https://raw.githubusercontent.com/nodejh/hugo-theme-mini/master/images/screenshot.png)
+## Changes
 
-- [Online demo](https://nodejh.github.io/hugo-theme-mini)
-- [Example Site Source](https://github.com/nodejh/hugo-theme-mini/tree/master/exampleSite)
-
-Features:
-
-- Fast
-- Minimalist
-- Responsive
-- Archive
-- Tags
-
+- CSS inspired by the [Tufte-CSS](https://edwardtufte.github.io/tufte-css/) provided.
+- Nicer tag labels
+- Semantic web: basic [Open graph](https://ogp.me/), [schema.org](https://schema.org/), and [twitter cards](https://www.google.com/search?client=firefox-b-d&q=twitter+cards).
 
 ## Installation
 
@@ -39,7 +31,7 @@ Features:
 
     ```yaml
     theme: 
-       - github.com/nodejh/hugo-theme-mini
+       - https://github.com/paradigmatic/hugo-theme-mini
     ```
 
 ### As Git Submodule
@@ -47,7 +39,7 @@ Features:
 1. Inside the folder of your Hugo site run:
 
     ```bash
-    $ git submodule add https://github.com/nodejh/hugo-theme-mini.git themes/mini
+    $ git submodule add https://github.com/paradigmatic/hugo-theme-mini.git themes/mini
     ```
 
 2. Add the theme's directory to your `config.yaml`:
