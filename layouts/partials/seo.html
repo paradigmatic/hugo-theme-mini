@@ -1,6 +1,6 @@
 {{/* Adapted from https://gist.github.com/jeremyjaymes/403f1cb712d98e8c8a36c904055958d6 */}}
 
-<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}"/>
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="{{ .Permalink }}" />
 
@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:site_name" content="{{ .Site.Title | plainify }}" />
 
 {{ if .IsHome }} 
-<meta property="og:title" content="{{ .Title }} - {{ .Site.Params.Tagline }}" />
+<meta property="og:title" content="{{ .Title | plainify }} - {{ .Site.Params.Tagline }}" />
 <meta property="og:description" content="{{ .Site.Params.description }}" />
 {{ else }}
-<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}" />
+<meta property="og:title" content="{{ .Title | plainify }} - {{ .Site.Title | plainify }}" />
 <meta property="og:description" content="{{.Summary}}" />
 {{ end }}
 
@@ -28,12 +28,12 @@
       "@context": "http://schema.org", 
       "@type": "WebSite", 
       "url": "{{ .Permalink }}", 
-      "name": "{{ .Site.Title }}",
+      "name": "{{ .Site.Title | plainify }}",
       "author": {
           "@type": "Person",
           "name": "{{ .Site.Params.author }}"
       },
-      "description": "{{ .Site.Params.description }}",
+      "description": "{{ .Site.Params.description }}"
     }
 </script>
 {{ end }}
@@ -62,7 +62,7 @@
           "@type": "Person",
           "name": "{{ .Site.Params.author }}"
       },
-      "description": "{{ .Site.Params.description }}",
+      "description": "{{ .Site.Params.description }}"
   }
   {{ end }}
 </script>
